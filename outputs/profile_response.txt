@@ -1,0 +1,23 @@
+```json
+{
+  "user_profile": {
+    "age": null,
+    "sex": null,
+    "activity_level": "Active",
+    "body_composition_notes": null,
+    "systemic_conditions": [],
+    "implanted_devices": [],
+    "sensory_deficits": null,
+    "possible_contraindications": null
+  },
+  "injury_profile": {
+    "anatomical_location": "Right hamstring",
+    "acuity_phase": "Acute",
+    "inflammation_and_swelling": true,
+    "skin_integrity_at_site": "Intact",
+    "primary_sensation": ["sharp pain", "tenderness"],
+    "pain_level": null,
+    "possible_contraindications": "Heating therapy may be contraindicated due to acute inflammation."
+  }
+}
+```
