@@ -3,7 +3,6 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 from config.settings import (
     GITHUB_API_KEY,
-    GEMINI_API_KEY,
 )
 
 # ==========================================
@@ -17,12 +16,11 @@ text_model = ChatOpenAI(
     temperature=0
 )
 
-# ==========================================
 # Gemini Model (Therapy Strategy)
-# ==========================================
 
 med_model = ChatGoogleGenerativeAI(
-    api_key=GEMINI_API_KEY,
     model="gemini-2.5-flash",
-    temperature=0
+    project="your-project-id",
+    location="us-central1",
+    temperature=0.1
 )

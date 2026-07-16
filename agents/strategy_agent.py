@@ -20,13 +20,13 @@ class StrategyAgent:
 
         self.chain = (
             self.prompt
-            | text_model
+            | med_model
             | StrOutputParser()
         )
 
     def run(self):
 
-        print("Running Condition Agent:")
+        print("Running Strategy Agent:")
         response = self.chain.invoke({})
 
         print("\nLLM Response:\n")

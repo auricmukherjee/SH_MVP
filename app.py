@@ -1,6 +1,6 @@
 import os
 from services.pipeline import SmartHealPipeline
-from utils.loader import load_text
+
 
 
 def main():

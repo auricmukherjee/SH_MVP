@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SmartHeal Intake | Runverve</title>
+<meta name="description" content="Runverve SmartHeal recovery intake. Share your profile, injury details, and medical records to get a therapy recommendation." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wordmark">
+    <span class="wordmark-block" aria-hidden="true"></span>
+    <span class="wordmark-text">RUNVERVE</span>
+  </div>
+  <div class="topbar-label">SMARTHEAL RECOVERY INTAKE</div>
+</header>
+
+<section class="hero">
+  <h1>Tell us what hurts.<br /><span class="hero-red">We build the protocol.</span></h1>
+  <p>Share your profile, injury details, and any prescriptions or lab reports. SmartHeal reads everything, decides whether therapy is right for you, and returns a plan with exact device settings or the right equipment to use instead.</p>
+</section>
+
+<main class="layout" id="intake">
+
+  <nav class="rail" aria-label="Intake progress">
+    <div class="rail-line"><div class="rail-fill" id="railFill"></div></div>
+    <a href="#section-profile" class="station" data-station="profile">
+      <span class="station-dot"></span>
+      <span class="station-num">01</span>
+      <span class="station-name">Profile</span>
+    </a>
+    <a href="#section-injury" class="station" data-station="injury">
+      <span class="station-dot"></span>
+      <span class="station-num">02</span>
+      <span class="station-name">Injury</span>
+    </a>
+    <a href="#section-records" class="station" data-station="records">
+      <span class="station-dot"></span>
+      <span class="station-num">03</span>
+      <span class="station-name">Records</span>
+    </a>
+    <a href="#section-notes" class="station" data-station="notes">
+      <span class="station-dot"></span>
+      <span class="station-num">04</span>
+      <span class="station-name">Notes</span>
+    </a>
+  </nav>
+
+  <div class="forms">
+
+    <section class="card" id="section-profile" data-section="profile">
+      <div class="card-head">
+        <span class="eyebrow">01 / USER PROFILE</span>
+        <h2>Who is recovering</h2>
+      </div>
+      <div class="grid two">
+        <label class="field">
+          <span>Age</span>
+          <input type="number" id="age" min="1" max="120" placeholder="34" />
+        </label>
+        <label class="field">
+          <span>Sex</span>
+          <select id="sex">
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Height (cm)</span>
+          <input type="number" id="height" min="50" max="250" placeholder="175" />
+        </label>
+        <label class="field">
+          <span>Weight (kg)</span>
+          <input type="number" id="weight" min="10" max="300" placeholder="72" />
+        </label>
+      </div>
+      <label class="field">
+        <span>Activity level</span>
+        <select id="activityLevel">
+          <option value="">Select</option>
+          <option>Sedentary</option>
+          <option>Lightly active</option>
+          <option>Active</option>
+          <option>Athlete</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Known medical conditions</span>
+        <input type="text" id="conditions" placeholder="Diabetes, hypertension, none..." />
+      </label>
+      <div class="grid two">
+        <label class="field">
+          <span>Implanted devices</span>
+          <input type="text" id="implants" placeholder="Pacemaker, metal pins, none..." />
+        </label>
+        <label class="field">
+          <span>Current medications</span>
+          <input type="text" id="medications" placeholder="NSAIDs, blood thinners, none..." />
+        </label>
+      </div>
+    </section>
+
+    <section class="card" id="section-injury" data-section="injury">
+      <div class="card-head">
+        <span class="eyebrow">02 / INJURY PROFILE</span>
+        <h2>Where it hurts</h2>
+      </div>
+      <div class="grid two">
+        <label class="field">
+          <span>Injury location</span>
+          <input type="text" id="injuryLocation" placeholder="Right hamstring, lower back..." />
+        </label>
+        <label class="field">
+          <span>When did it start</span>
+          <input type="text" id="injuryOnset" placeholder="3 days ago, last month..." />
+        </label>
+      </div>
+      <div class="field">
+        <span class="field-label">Pain scale</span>
+        <div class="pain-row">
+          <input type="range" id="painScale" min="0" max="10" step="1" value="5" aria-label="Pain scale from 0 to 10" />
+          <output class="pain-value" id="painValue" for="painScale">5</output>
+        </div>
+        <div class="pain-ends"><span>0 No pain</span><span>10 Worst</span></div>
+      </div>
+      <label class="field">
+        <span>Describe the injury</span>
+        <textarea id="injuryDescription" rows="4" placeholder="What happened, how it feels, what makes it better or worse..."></textarea>
+      </label>
+      <div class="field">
+        <span class="field-label">Photo of the injury (optional)</span>
+        <div class="dropzone" id="injuryDrop" tabindex="0" role="button" aria-label="Upload a photo of the injury">
+          <input type="file" id="injuryImage" accept="image/png,image/jpeg,image/webp" hidden />
+          <span class="dz-text">Drop an image here or <u>browse</u></span>
+        </div>
+        <ul class="filelist" id="injuryFileList"></ul>
+      </div>
+    </section>
+
+    <section class="card" id="section-records" data-section="records">
+      <div class="card-head">
+        <span class="eyebrow">03 / MEDICAL RECORDS</span>
+        <h2>Prescriptions and reports</h2>
+      </div>
+      <p class="card-note">Upload prescriptions, lab reports, or doctor notes. PDFs, images, and text files are supported. Photos of paper reports work too.</p>
+      <div class="dropzone" id="docsDrop" tabindex="0" role="button" aria-label="Upload medical documents">
+        <input type="file" id="docsInput" accept="application/pdf,text/plain,image/png,image/jpeg,image/webp" multiple hidden />
+        <span class="dz-text">Drop PDFs, images, or .txt files here or <u>browse</u></span>
+      </div>
+      <ul class="filelist" id="docsFileList"></ul>
+    </section>
+
+    <section class="card" id="section-notes" data-section="notes">
+      <div class="card-head">
+        <span class="eyebrow">04 / ADDITIONAL NOTES</span>
+        <h2>Anything else</h2>
+      </div>
+      <label class="field">
+        <span>Notes for the recommendation engine</span>
+        <textarea id="additionalNotes" rows="4" placeholder="Training goals, upcoming events, previous therapies tried..."></textarea>
+      </label>
+    </section>
+
+    <div class="submit-row">
+      <button class="cta" id="analyzeBtn" type="button">
+        <span class="cta-text">Analyze and recommend</span>
+      </button>
+      <p class="submit-hint" id="sizeHint">Attachments are sent securely for analysis. Keep total uploads under 4 MB.</p>
+    </div>
+
+    <section class="pipeline hidden" id="pipeline" aria-live="polite">
+      <div class="pipe-step" data-step="note"><span class="pipe-dot"></span>Pooling your inputs into a clinical note</div>
+      <div class="pipe-step" data-step="profile"><span class="pipe-dot"></span>Profile agent reading your records</div>
+      <div class="pipe-step" data-step="strategy"><span class="pipe-dot"></span>Strategy agent building the recommendation</div>
+    </section>
+
+    <section class="results hidden" id="results"></section>
+
+    <p class="disclaimer">SmartHeal provides decision support for recovery, not a medical diagnosis. If symptoms are severe, worsening, or unexplained, consult a clinician first.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <span class="footer-mark">RUNVERVE</span>
+  <span>SmartHeal Recovery Intelligence</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

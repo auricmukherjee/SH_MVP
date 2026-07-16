@@ -3,22 +3,22 @@
   "Heating": {
     "output_type": "38-45 degree Celsius",
     "duration": "20 minutes",
-    "clinical_rationale": "Heating is effective for chronic pain and muscle stiffness, which can help improve blood flow and promote relaxation in the affected area. It is not contraindicated for acute inflammation or swelling in this case.",
-    "safety_warnings": "Ensure the patient does not have any acute inflammation or swelling in the area being treated."
+    "clinical_rationale": "Heating is effective for chronic pain and muscle stiffness, which can help improve blood flow and promote relaxation in the affected area. It is not contraindicated for acute inflammation or swelling in this case."
   },
   "Electrotherapy": {
     "output_type": "NULL",
     "intensity": "NULL",
     "duration": "NULL",
-    "clinical_rationale": "Electrotherapy was not chosen as heating is more appropriate for addressing chronic pain and muscle stiffness in this case.",
-    "safety_warnings": "Avoid electrotherapy if the patient has contraindications such as pacemakers or severe arrhythmias."
+    "clinical_rationale": "Electrotherapy was not chosen as heating is more appropriate for addressing chronic pain and muscle stiffness in this case."
   },
   "Vibration Therapy": {
     "output_type": "NULL",
     "intensity": "NULL",
     "duration": "NULL",
-    "clinical_rationale": "Vibration therapy was not chosen as heating is more effective for the patient's symptoms of chronic pain and muscle stiffness.",
-    "safety_warnings": "Avoid vibration therapy if the patient has contraindications such as deep vein thrombosis or acute fractures."
+    "clinical_rationale": "Vibration therapy was not chosen as heating is more effective for the patient's symptoms of chronic pain and muscle stiffness."
+  },
+  "Other Recommendations": {
+    "Addtionally": "Ensure the patient avoids activities that may exacerbate their symptoms and consider incorporating gentle stretching or physical therapy exercises to complement the heating therapy."
   }
 }
 ```

@@ -1,0 +1,25 @@
+RUNVERVE SMARTHEAL - POOLED CLINICAL NOTE (TEMPLATE)
+
+At runtime, every text input from the user is pooled into a clinical_note.txt with this structure and saved to Supabase Storage at configs/{session_id}/clinical_note.txt. This file in the repo is only a reference template.
+
+=== USER PROFILE ===
+Age:
+Sex:
+Height (cm):
+Weight (kg):
+Activity level:
+Known medical conditions:
+Implanted devices:
+Current medications:
+
+=== INJURY PROFILE ===
+Injury location:
+Onset:
+Pain scale (0-10):
+Injury description:
+
+=== UPLOADED DOCUMENT TEXT ===
+(Extracted content of uploaded .txt files; PDFs and images are passed to the model directly.)
+
+=== ADDITIONAL NOTES ===
+(Free text from the user.)

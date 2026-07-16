@@ -1,0 +1,37 @@
+{
+    "Heating": [
+        "38°C",
+        "39°C",
+        "40°C",
+        "41°C",
+        "42°C",
+        "43°C",
+        "44°C",
+        "45°C"
+    ],
+
+    "Electrotherapy": [
+        "Tapping",
+        "Pushing",
+        "Continuous Hammering",
+        "Massage Tapping",
+        "Kneading",
+        "Continuous Knocking",
+        "Push Squeezing",
+        "Quick Knocking",
+        "Acupuncture Squeezing",
+        "Squeezing"
+    ],
+
+    "Vibration Therapy": [
+        "50 Hz",
+        "75 Hz",
+        "100 Hz",
+        "125 Hz",
+        "150 Hz",
+        "175 Hz",
+        "200 Hz",
+        "225 Hz",
+        "250 Hz"
+    ]
+}

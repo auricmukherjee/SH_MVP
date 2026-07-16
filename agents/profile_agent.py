@@ -25,13 +25,13 @@ class ProfileAgent:
 
         self.chain = (
             self.prompt
-            | text_model
+            | med_model
             | StrOutputParser()
         )
 
     def run(self):
 
-        print("Running Condition Agent:")
+        print("Running Profile Agent:")
         response = self.chain.invoke(
             {
                 "clinical_note": self.clinical_note_text

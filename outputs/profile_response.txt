@@ -15,8 +15,8 @@
     "acuity_phase": "Acute",
     "inflammation_and_swelling": true,
     "skin_integrity_at_site": "Intact",
-    "primary_sensation": ["sharp pain", "tenderness"],
-    "pain_level": null,
+    "primary_sensation": ["localized tenderness", "pain with resisted knee flexion", "pain with passive hip flexion"],
+    "pain_level": "Mild to moderate pain (not explicitly rated on a scale)",
     "possible_contraindications": "Heating therapy may be contraindicated due to acute inflammation."
   }
 }
